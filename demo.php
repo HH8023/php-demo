@@ -27,10 +27,14 @@ if($height == "中"){
 $r = 1;
 $area = constant($p)*$r*$r;
 echo $area;
-
 echo "<br>------------------<br>";
-
-
+echo "如何判断常量是否被定义：如果常量被重复定义以后，PHP解析器会发出“Constant XXX already defined”的警告，提示我么该常量已经被定义过，那么在团队开发，或代码很大的情况下，我们怎样判断一个常量是否被定义呢？ defined()函数可以帮助我们判断一个常量是否已经定义，其语法格式为：bool defined(string constant_name)它只有参数constant_name，指的是要获取常量的名称，若存在则返回布尔类型true，否则返回false（注：bool表示函数返回值类型为布尔类型）<br>";
+define("PIa",3.14);
+$p = "PIa";
+$is1 = defined($p);
+$is2 = defined("PIb");
+var_dump($is1);
+var_dump($is2);
 echo "<br>------------------<br>";
 
 
