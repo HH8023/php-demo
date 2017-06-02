@@ -146,14 +146,47 @@ $row = $num%$maxLine?$num%$maxLine:$maxLine;
 echo "编号<b>".$num."</b>的座位在第<b>".$line."</b>排第<b>".$row."</b>个位置";
 
 echo "<br>------------------<br>";
+echo "6、顺序结构：顺序结构就像一条直线，按着顺序一直往下执行，我们不便携的代码默认都是按照顺序结构执行的。<br>";
+$shoesPrice = 49;//鞋子的单价
+$shoesNum = 1;//鞋子的数量
+$shoesMoney = $shoesPrice * $shoesNum;
 
-
+$shirtPrice = 99;//衬衣的单价
+$shirtNum = 2;//衬衣的数量
+$shirtMoney = $shirtPrice * $shirtNum;
+$orderMoney = $shirtMoney+$shoesMoney;
+echo $orderMoney;
 echo "<br>------------------<br>";
-
-
+echo "条件结构之if...else...<br>";
+date_default_timezone_set('Asia/ShangHai');
+$today = date('m-d',time());//获取当天日期
+$birthday = "02-14";//生日
+$money = 238;//消费金额
+$discount = 0.8;//八折优惠
+if($today == $birthday){
+	$money = $money *$discount;
+}else{
+$money = $money *1;
+}
+echo $money;
 echo "<br>------------------<br>";
-
-
+echo "PHP条件结构之switch...case...首先判断条件，若条件的返回值为条件值一，则执行任务一，若条件返回的值为条件值二，则执行任务二，若条件的返回值既不是条件值一也不是条件值二，则执行默认任务。break的作用是结束switch,使用switch语句可以避免冗长的if..else if..else代码块。<br>";
+$nu = rand(1,9);//获取1至9的随机数
+$info = "";//提示信息
+switch($nu){
+	case 1:
+	    $info = "中了一等奖！";
+		break;
+	case 2:
+	    $info = "中了二等奖";
+		break;
+	case 3:
+	    $info = "中了三等奖";
+		break;
+	default;
+	    $info = "你没有中奖";
+}
+echo $info;//输出是否中奖
 echo "<br>------------------<br>";
 
 
