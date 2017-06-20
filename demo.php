@@ -188,10 +188,51 @@ switch($nu){
 }
 echo $info;//输出是否中奖
 echo "<br>------------------<br>";
-
-
+$sum = 10;
+$num1 = 2;
+switch($num){
+	case 1:
+		$sum = $sum +10;
+		break;
+	case 2:
+		$sum = $sum +10;
+		break;
+	case 3:
+		$sum = $sum +10;
+		break;
+	default:
+		$sum = $sum +10;
+}
+echo "A例子的值是：".$sum."<br>";
+//B例子
+$num = 2;
+$sum = 10;
+switch($num){
+	case 1:
+		$sum = $sum + 10;
+	//	break;
+	case 2:
+		$sum = $sum +10;
+	//	break;
+	case 3:
+		$sum = $sum +10;
+//break;
+	default:
+		$sum = $sum +10;
+}
+echo "B例子的值是：".$sum."<br>";
+echo "这上面的break是跳出case循环，如果没有break的话就是直接每一个case都要跑一遍，所以结果会有不同。<br>";
 echo "<br>------------------<br>";
-
+echo "while循环语句:首先判断某个条件是否符合（条件返回值是否是true），若符合则执行任务，执行完毕任务，再判断条件是否满足要求，符合则重复执行此任务，否则结束任务。<br>";
+$sum = 12;
+echo "我饿了<br>";
+while($sum<100){
+	$num = rand(1,20);//rand是随机数
+	$sum = $sum + $num;
+	echo "我还没有吃饱呢！";
+	echo "<br>";
+}
+echo "终于吃饱了！";
 
 echo "<br>------------------<br>";
 
