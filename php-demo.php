@@ -66,15 +66,51 @@ foreach($students as $a){
 	echo $a;//输出姓名
 	echo "<br>";
 }
-
-
-
-
+echo "<br>";
 ?>
 
+<?php
+$students = array(
+'1'=>'令狐冲',
+'2'=>'林平之',
+'3'=>'曲洋',
+'4'=>'任盈盈',
+'5'=>'向问天',
+'6'=>'任我行',
+'7'=>'冲虚',
+'8'=>'方正',
+'9'=>'岳不群',
+'10'=>'宁中则',
+);
 
+foreach($students as $key =>$b){
+	echo $key.".".$b;//输出学号：姓名；
+	echo "<br>";
+}
+?>
 
-
+<?php
+echo "<br>结构嵌套之条件嵌套：<br>条件结构嵌套就像回家路上遇到的多个十字路口<br>";
+$totalMoney = 0;//总工资
+$basicMOney = 300;//基本工资
+$sex = "男";
+$noHouse = true;//是否有房
+$houseMoney = 150;//住房补贴
+$isPregnancy = true;//是否怀孕
+$pregnancyMoney = 100;//怀孕补贴
+if($sex == "男"){
+	$totalMoney = $basicMOney +0;//男的没有奖金
+	if($noHouse){
+		$totalMoney = $totalMoney + $houseMoney;
+	}
+}else if($sex =="女"){
+	$totalMoney = $basicMOney +$basicMOney;//女的有奖金
+	if($isPregnancy){
+		$totalMoney = $totalMoney + $pregnancyMoney;
+	}
+}
+echo $totalMoney;
+?>
 
 
 
