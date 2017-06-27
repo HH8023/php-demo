@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>z-index的使用</title>
+		<style>
+			div{
+				width:200px;
+				height:200px;
+				background-color:#ccc;
+			}
+			/*解决因为定位引起的元素遮盖的显示层级问题，要求：元素必须使用了定位属性*/
+			#one{
+				background-color:#550055;
+				position:absolute;
+				left:50px;
+				top:50px;
+				z-index:5;
+			}
+			/*z-index的值越大，对应的元素越靠上显示*/
+			#two{
+				position:relative;
+				left:80px;
+				top:80px;
+				z-index:9;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="one"></div>		
+		<div id="two"></div>	
+	</body>
+</html>
