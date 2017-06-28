@@ -16,7 +16,13 @@ $bool = false;
 var_dump($bool);
 echo "布尔型的false转换为浮点型是：".(float)$bool."<br>";
 
+//字符串：如果开头是数字，取数字部分，如果不是数字算0；
+$str = "1.234abc";
+var_dump($str);
+echo "开头是数字的字符串转换为浮点型，取数字部分".(float)$str."<br>";
 
+$str = "abc";
+echo "开头不是数字的字符串转换为浮点型,算0。".(float)$str."<br>";
 
 
 
